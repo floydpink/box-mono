@@ -12,8 +12,9 @@ keywords:
 packages:
   - mono@3.2.1
 script: |
+  mono -V
   sudo add-apt-repository ppa:directhex/monoxide -y
   sudo apt-get update -y
-  sudo apt-get install mono -y
+  sudo apt-get upgrade mono -y
 env:
   WERCKER_MONO_VERSION: "3.2.1"
