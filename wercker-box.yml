@@ -1,0 +1,19 @@
+name: mono
+version: 0.0.1
+inherits: wercker/ubuntu12.04-webessentials@0.0.3
+type: main
+platform: ubuntu@12.04
+description: wercker box for mono cross-platform open source .NET development framework
+keywords:
+  - mono
+  - opensource
+  - .NET
+  - C#
+packages:
+  - mono@3.2.1
+script: |
+  sudo add-apt-repository ppa:directhex/monoxide -y
+  sudo apt-get update -y
+  sudo apt-get install mono -y
+env:
+  WERCKER_MONO_VERSION: "3.2.1"
