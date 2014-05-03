@@ -1,5 +1,5 @@
 name: mono
-version: 0.0.1
+version: 0.0.2
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type: main
 platform: ubuntu@12.04
@@ -16,5 +16,6 @@ script: |
   sudo apt-add-repository ppa:directhex/ppa -y
   sudo apt-get update -y
   sudo apt-get install monodevelop -y
+  mono -V
 env:
   WERCKER_MONO_VERSION: "3.2.1"
