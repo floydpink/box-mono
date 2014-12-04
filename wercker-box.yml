@@ -13,7 +13,6 @@ keywords:
 packages:
   - mono@3.2.8
 script: |
-  sudo apt-add-repository ppa:directhex/ppa -y
   sudo apt-get update -y
   sudo apt-get install monodevelop -y
   mono -V
